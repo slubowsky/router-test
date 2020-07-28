@@ -1,4 +1,6 @@
 <p>two works!</p>
 
 <button routerLink="">Home</button>
-<button (click)="navigate()">Go to three using navigation service</button> <br>NavigationService navigate set to -> {{navigationService.navigator}}
+<button [disabled]="!navigationService.navigator" (click)="navigate()">Go to three using navigation service</button> <br>
+<span *ngIf="navigationService.navigator">NavigationService navigate set to -> {{navigationService.navigator}}</span>
+<span *ngIf="!navigationService.navigator">Visit one first to set navigationService.navigator</span>
