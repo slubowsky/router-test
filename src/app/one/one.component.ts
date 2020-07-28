@@ -16,8 +16,7 @@ export class OneComponent {
     };
   }
 
-  test() {
-    this.router.navigate(['../three'],
-      { relativeTo: this.route });
+  navigate() {
+    this.navigationService.navigate();
   }
 }
